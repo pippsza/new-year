@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans|Droid+Sans+Mono);
+html {
+  height: 99%;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 99%;
+  flex-direction: column;
+  height: 100%;
+  background: rgb(0, 0, 0);
+  background: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(32, 164, 214, 1) 76%,
+    rgba(38, 218, 255, 1) 100%
+  );
+}
+
+* {
+  font-family: "Open Sans", serif;
+  font-optical-sizing: auto;
+
+  text-align: center;
+  box-sizing: border-box;
+  font-size: 2vw;
+  text-align: center;
+}
+.is-shown {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+@media screen and (max-width: 1158px) {
+  .⚠ {
+    position: relative; /* So we can position the content as absolute */
+
+    /* Using the borders to create a triangle  */
+    border-left: 0.7em solid transparent;
+    border-right: 0.7em solid transparent;
+    border-bottom: 1.35em solid yellow;
+
+    top: -1em; /* Correction because of the CSS Triangle trick*/
+  }
+  .⚠::before {
+    content: "⚠";
+
+    /* Position the character over the triangle */
+    top: 0.45em;
+    left: -0.45em;
+    position: absolute;
+
+    color: black;
+    font-size: 2em;
+    line-height: 1em;
+  }
+
+  /* Additional style to tart up the page */
+  html {
+    display: table;
+    width: 100%;
+    min-height: 80%;
+  }
+  body {
+    display: table-cell;
+    vertical-align: middle;
+    background: rgb(205, 205, 0);
+    background: linear-gradient(90deg, rgb(125, 125, 0), rgb(205, 205, 0));
+    min-height: 80%;
+    text-align: center;
+  }
+  .is-shown {
+    position: static;
+    width: auto;
+    height: auto;
+    margin: 0;
+    border: initial;
+    padding: initial;
+    white-space: normal;
+    clip-path: none;
+    clip: auto;
+    overflow: visible;
+    font-size: 20px;
+  }
+  span {
+    font-size: 1500%;
+  }
+  .main-container {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: 60%;
+    flex-direction: column;
+    background-color: rgb(223, 223, 223);
+    height: 60%;
+    border-radius: 10px;
+    border: solid;
+    border-width: 4px;
+    border-color: rgb(0, 0, 0);
+    gap: 20px;
+  }
+
+  .choose-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+  }
+  button {
+    background-color: #6fbbdc;
+    color: white;
+    padding: 10px 20px;
+    color: black;
+    border: solid;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+  }
+  button:hover {
+    background-color: #629eb8;
+  }
+  .mom-button{ 
+    position: absolute;
+  }
+}
