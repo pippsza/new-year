@@ -361,7 +361,7 @@ function checkAnswer(selectedAnswer) {
     const currentQuestion = questions[currentQuestionIndex];
     if (selectedAnswer === currentQuestion.correct) {
         correctAnswersInARow++;
-        if (correctAnswersInARow === 53) {
+        if (correctAnswersInARow === 7) {
             successMessage.style.display = 'block';
             restartBtn.style.display = 'block';
         } else {
