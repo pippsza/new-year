@@ -149,5 +149,13 @@ body {
   }
   .mom-button{ 
     position: absolute;
+ 
   }
+a{text-decoration: none;
+color: black;
+cursor: auto;}
+}
+.answers{ 
+  display:flex;justify-content: center;align-items:center;
+  gap: 20px;
 }

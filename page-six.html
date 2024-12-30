@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="./Pippsza.png" type="image/png" />
+    <link rel="apple-touch-icon" href="./Pippsza.png" />
+    <link rel="icon" sizes="192x192" href="./Pippsza.png" />
+    <script src="./script7.js" defer></script>
+  </head>
+  <style>
+    body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+    }
+    #question {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    .button {
+        margin: 5px;
+        padding: 10px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+    #nextButton {
+        display: none;
+        margin-top: 20px;
+        padding: 10px;
+        font-size: 16px;
+        cursor: pointer;
+        background-color: #28a745;
+        color: white;
+        border: none;
+    }
+</style>
+</head>
+<body>
+
+    <div class="main-container">
+  
+      
+
+
+        <div class="timer"> <span id="timer">2</span> </div>
+        <div class="question" id="question"></div>
+        <div class="answers" id="answers"></div>
+        <button class="restart-btn" id="restartBtn" style="display: none;" onclick=" window.location.href =' ./page-seven.html'">Далее</button>
+        <div class="success-message" id="successMessage" style="display: none;">Умняша, ты ответила правильно три раза подряд!</div>
+      
+    </div>
+
+
+</body>
+</html>
