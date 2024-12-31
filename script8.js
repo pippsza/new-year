@@ -7,35 +7,36 @@ let player = null; // Игрок изначально отсутствует
 const goal = { x: canvas.width - 50, y: canvas.height - 50, radius: 15 }; // Финиш
 
 const walls = [
-    { x: 0, y: 0, width: 714, height: 14 },
-    { x: 0, y: 14, width: 14, height: 700 },
-    { x: 112, y: 14, width: 14, height: 56 },
-    { x: 140, y: 14, width: 14, height: 84 },
-    { x: 336, y: 14, width: 14, height: 28 },
-    { x: 420, y: 14, width: 14, height: 84 },
-    { x: 616, y: 14, width: 14, height: 56 },
-    { x: 700, y: 14, width: 14, height: 700 },
-    { x: 14, y: 112, width: 28, height: 14 },
-    { x: 84, y: 112, width: 56, height: 14 },
-    { x: 196, y: 112, width: 56, height: 14 },
-    { x: 336, y: 112, width: 84, height: 14 },
-    { x: 532, y: 112, width: 56, height: 14 },
-    { x: 644, y: 112, width: 28, height: 14 },
-    { x: 112, y: 140, width: 14, height: 56 },
-    { x: 224, y: 140, width: 14, height: 84 },
-    { x: 280, y: 140, width: 14, height: 84 },
-    { x: 476, y: 140, width: 14, height: 84 },
-    { x: 532, y: 140, width: 14, height: 84 },
-    { x: 644, y: 140, width: 14, height: 56 },
-    { x: 14, y: 196, width: 28, height: 14 },
-    { x: 84, y: 196, width: 112, height: 14 },
-    { x: 252, y: 196, width: 28, height: 14 },
-    { x: 420, y: 196, width: 28, height: 14 },
-    { x: 560, y: 196, width: 112, height: 14 },
-    { x: 644, y: 224, width: 14, height: 112 },
-    { x: 336, y: 252, width: 14, height: 112 },
-    { x: 476, y: 252, width: 14, height: 112 },
-    { x: 700, y: 700, width: 14, height: 14 }
+    { x: 0, y: 0, width: canvas.width, height: 5 },
+    { x: 0, y: 0, width: 5, height: canvas.height },
+    { x: canvas.width - 5, y: 0, width: 5, height: canvas.height },
+    { x: 0, y: canvas.height - 5, width: canvas.width, height: 5 },
+    { x: 0, y: 60, width: 1150, height: 5 },
+    { x: 70, y: 120, width: 1150, height: 5 },
+    { x: 0, y: 180, width: 1150, height: 5 },
+    { x: 70, y: 240, width: 1150, height: 5 },
+    { x: 0, y: 290, width: 1150, height: 5 },
+    { x: 70, y: 350, width: 1150, height: 5 },
+    { x: 70, y: 350, width: 5, height: 150 },
+    { x: 130, y: 410, width: 5, height: 150 },
+    { x: 190, y: 350, width: 5, height: 150 },
+    { x: 250, y: 410, width: 5, height: 150 },
+    { x: 310, y: 350, width: 5, height: 150 },
+    { x: 370, y: 410, width: 5, height: 150 },
+    { x: 430, y: 350, width: 5, height: 150 },
+    { x: 490, y: 410, width: 5, height: 150 },
+    { x: 550, y: 350, width: 5, height: 150 },
+    { x: 610, y: 410, width: 5, height: 150 },
+    { x: 670, y: 350, width: 5, height: 150 },
+    { x: 730, y: 410, width: 5, height: 150 },
+    { x: 790, y: 350, width: 5, height: 150 },
+    { x: 850, y: 410, width: 5, height: 150 },
+    { x: 910, y: 350, width: 5, height: 150 },
+    { x: 970, y: 410, width: 5, height: 150 },
+    { x: 1030, y: 350, width: 5, height: 150 },
+    { x: 1090, y: 410, width: 5, height: 150 },
+    { x: 1150, y: 350, width: 5, height: 150 },
+    
 ];
 
 
@@ -87,7 +88,7 @@ function checkCollisions() {
     const dy = player.y - goal.y;
     if (Math.sqrt(dx * dx + dy * dy) < player.radius + goal.radius) {
         alert('Поздравляю, ты победила!');
-        resetGame();
+        window.location.href ="./finish-page.html";
     }
 }
 
