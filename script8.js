@@ -7,10 +7,10 @@ let player = null; // Игрок изначально отсутствует
 const goal = { x: canvas.width - 50, y: canvas.height - 50, radius: 15 }; // Финиш
 
 const walls = [
-    { x: 0, y: 0, width: canvas.width, height: 5 },
-    { x: 0, y: 0, width: 5, height: canvas.height },
-    { x: canvas.width - 5, y: 0, width: 5, height: canvas.height },
-    { x: 0, y: canvas.height - 5, width: canvas.width, height: 5 },
+    // { x: 0, y: 0, width: canvas.width, height: 5 },
+    // { x: 0, y: 0, width: 5, height: canvas.height },
+    // { x: canvas.width - 5, y: 0, width: 5, height: canvas.height },
+    // { x: 0, y: canvas.height - 5, width: canvas.width, height: 5 },
     { x: 0, y: 60, width: 1150, height: 5 },
     { x: 70, y: 120, width: 1150, height: 5 },
     { x: 0, y: 180, width: 1150, height: 5 },
